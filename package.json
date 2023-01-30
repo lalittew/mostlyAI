@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lalittew/mostlyAI/issues"
   },
-  "homepage": "https://github.com/lalittew/mostlyAI#readme"
+  "homepage": "https://github.com/lalittew/mostlyAI#readme",
+  "devDependencies": {
+    "cypress": "^9.3.1"
+  }
 }

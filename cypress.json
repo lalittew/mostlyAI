@@ -5,5 +5,14 @@
     "testFiles": ["**/*.feature"],
     "chromeWebSecurity": false,
     "viewportWidth": 1500,
-    "viewportHeight": 700
+    "viewportHeight": 700,
+    "reporter": "cypress-mochawesome-reporter",
+    "video": true,
+    "retries": 0,
+    "reporterOptions": {
+        "embeddedScreenshots": true,
+        "charts": true,
+        "reporterPageTitle": "Cypress Inline Report",
+        "inlineAssets": true
+    }
 }

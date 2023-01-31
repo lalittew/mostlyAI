@@ -25,7 +25,7 @@ class GenericFunctions{
     }
 
     clickElement(element){
-        cy.get(element).click()
+        cy.get(element).click({force:true})
     }
 
     enterText(element, textToEnter){

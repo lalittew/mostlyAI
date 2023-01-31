@@ -29,9 +29,9 @@ class MostlyAIChallengePage{
     errorMessageWordNotFoundText = 'Sorry, no results for:'
 
     enterTextToSearchAndEnter(element, wordToSearch){
-        cy.get(element).clear()
-        cy.get(element).type(wordToSearch)
-        cy.get(element).type('{enter}')
+        cy.get(element).clear({force: true})
+        cy.get(element).type(wordToSearch, {force: true})
+        cy.get(element).type('{enter}', {force: true})
     }
 
     openBookMarSubMenu(bookMarkToOpenMenu){

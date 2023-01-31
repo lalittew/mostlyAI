@@ -1,0 +1,30 @@
+{
+  "name": "mostlyai",
+  "version": "1.0.0",
+  "description": "This is to perform coding challenge of mostly ai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lalittew/mostlyAI.git"
+  },
+  "author": "Lalit Tewari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lalittew/mostlyAI/issues"
+  },
+  "homepage": "https://github.com/lalittew/mostlyAI#readme",
+  "devDependencies": {
+    "cypress": "^9.3.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^3.2.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.7.6"
+  }
+}

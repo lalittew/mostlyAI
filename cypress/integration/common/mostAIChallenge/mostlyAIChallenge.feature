@@ -20,3 +20,4 @@ Feature: This feature file is to perform the coding challenge for Mostly AI
         Given I am on Mostly AI home page
         Then I hover mouse on "Company" bookmark to enable the sub menu of bookmark 
         When I click "Contact" item under the Company bookmark
+        Then I fill all the details to contact

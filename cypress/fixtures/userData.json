@@ -1,0 +1,9 @@
+{
+  "firstName": "firstName",
+  "lastName": "lastName",
+  "businessEmail": "firstName.lastName@mostly.ai",
+  "mobileNumber": "07777777777",
+  "organization": "Mostly AI",
+  "country": "United Kingdom",
+  "description": "This is sample text for code challenge"
+}

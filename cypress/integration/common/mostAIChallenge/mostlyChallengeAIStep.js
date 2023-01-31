@@ -51,3 +51,7 @@ Then("I hover mouse on {string} bookmark to enable the sub menu of bookmark", (b
 When("I click {string} item under the Company bookmark", (clickSubMenuItem) => {
     mostlyAIChallengePage.clickSubMenuUnderCompany(clickSubMenuItem)
 })
+
+When("I fill all the details to contact", () => {
+    mostlyAIChallengePage.fillDetailsToContact()
+})

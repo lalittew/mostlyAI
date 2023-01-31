@@ -1,0 +1,62 @@
+This file contains all the details about the project.
+
+General Details: Below are some general details 
+    * Framework used: Cypress
+    * Language used: Java script
+    * Node Version: v12.16.2
+    * Npm version: 6.14.4
+    * Cypress version: 9.3.1
+    * IDE used: Visual studio code
+    * Git repository link: https://github.com/lalittew/mostlyAI.git
+
+Highlights of framework:
+* This framework is integrated with cucumber 
+* Have used inbuilt cucumber plugin from VS code marketplace
+* Below are the file structure 
+    * There is common folder which contain 2 subfolder namely: mostlyAIChallenge and genericFunctions
+    * mostlyAIChallange folder contains three files namely: mostlyAIChallenge.feature, mostlyAIChallengeStep.js, mostlyAIChallengePage.js
+        * mostlyAIChallenge.feature: This file contain all the Scenarios and feature steps in BDD format, related to challenge given to solve.
+        * mostlyAIChallengeStep.js: This file contains the step definition of all the steps written in file mostlyAIChallenge.feature
+        * mostlyAIChallengePage.js: This file contains all the elements, strings and functions related to challenge 1.
+    * genericFunction folder contains file genericFunction.js
+        * genericFunction.js: This file contains all the generic/basic functions which is used across the project or which are used very frequently
+* BaseUrl is defined in cypress.json file under env variable.
+
+
+Data sheet: 
+* This framework also uses the common data sheet which can be extended or different data sheets can be used.
+* This is json file which contains all the generic data which are used or can be used across framework
+* The location of data sheet is cypress -> fixtures -> userData.json
+
+
+HTML Reporting and Screen shots:
+* This framework stores all the HTML reports under cypress -> reports folder
+* HTML file will be generated everytime we run the tests.
+* If any test fails then HTML reports will also attach the screen shots in report
+* To access the report open the project folder in computer and open html file under reports folder
+
+Videos and Retry:
+* This frameworkcan also generate the videos of running tests and stores in folder cypress -> videos
+* If we do not want video to be recored then simply open cypress.json file and set value for "videos" as false
+* This framework can also retry running failed test, if we do not want to retry then open cypress.json file and set value for "retries" as '0'
+* Currently the retries value is set to 0.
+
+Taggings: 
+* This framework also give you option to run certain test or not run certain test based on tags provided
+* To run or not run test with specific tags you need to provide tag name in format @TagName above Scenarios
+
+
+Common commands:
+* npx cypress run
+    * This will run the tests in terminal and it will run all the tests present in feature file unless its commented.
+    * This will by default run in electron
+    * Running this command will generate the screen shoots and video
+* npx cypress open
+    * This will open the cypress window and you can chose which file to run and also you can chose browser 
+    * Default it will run in chrome
+    * Running tests using this command will not generate the screen shoots and video 
+
+* npx cypress-tags run -e 'TAGS=@TagName'
+    * This command will run the test based on tags given before the test. where TagName is name of your choice to group the test
+    * If you want to run the test in cypress window instead of terminal then provide tags as @focus which will on run tests with
+      this tags when you chose file to run

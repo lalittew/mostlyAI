@@ -14,8 +14,8 @@ class MostlyAIChallengePage{
     yourEmailTextBox = 'input[name="email"]'
     yourMobileTextBox = 'input[name="mobilephone"]'
     yourOrganization = 'input[name="company"]'
-    yourCountry = 'input[name="country"]'
-    howYouHearDropDown = 'select[name="how_did_you_hear_about_mostly_ai_"]'
+    yourCountry = '#country-27854f4c-b840-41f2-b7af-a3c9f512c9e8'
+    howYouHearAboutUsDropDown = '#how_did_you_hear_about_mostly_ai_-27854f4c-b840-41f2-b7af-a3c9f512c9e8'
     descriptionTextBox = 'textarea[name="message"]'
     marketOfferCheckBox = 'label[class="hs-form-booleancheckbox-display"]'
     contactUsPageHeadline = '#headline-48-106'
@@ -39,7 +39,6 @@ class MostlyAIChallengePage{
         case 'Company': 
             genericFunctions.mouseHoverOnElementWithIndex(this.bookmarks, 3)
             genericFunctions.clickElement(mostlyAIChallengePage.cookieAcceptButton)
-            //genericFunctions.mouseHoverOnElementWithIndex(this.bookmarks, 3)
         break
         //Can add more case for other book marks
         }
@@ -56,31 +55,16 @@ class MostlyAIChallengePage{
 
     fillDetailsToContact(){
         genericFunctions.clickElement(this.contactUsPageHeadline)
-        
         genericFunctions.enterText(this.firstNameTextBox, data.firstName)
         genericFunctions.enterText(this.firstNameTextBox, data.lastName)
         genericFunctions.enterText(this.yourEmailTextBox, data.businessEmail)
         genericFunctions.enterText(this.yourMobileTextBox, data.mobileNumber)
         genericFunctions.enterText(this.yourOrganization, data.organization)
-        genericFunctions.enterText(this.descriptionTextBox, "Test")
+        genericFunctions.selectValueFromDropDown(this.yourCountry, data.country)
+        genericFunctions.selectValueFromDropDown(this.howYouHearAboutUsDropDown, data.howYouHear)
+        genericFunctions.enterText(this.descriptionTextBox, data.description)
         genericFunctions.clickElement(this.marketOfferCheckBox)
         genericFunctions.mouseHoverOnElementWithIndex(this.sendMessageButton, 1)
-        
-        
-
-
-        // cy.get('#country-27854f4c-b840-41f2-b7af-a3c9f512c9e8').realClick()
-        // cy.get('option[value="Afghanistan"]').realClick()
-        // genericFunctions.enterText(this.yourCountry, data.country)
-        // cy.get('#country-27854f4c-b840-41f2-b7af-a3c9f512c9e8').realClick()
-        // cy.get('md-option').contains('Country seven').click();
-        
-
-        
-    
-    // howYouHearDropDown = 'select[name="how_did_you_hear_about_mostly_ai_"]'
-     
-    // marketOfferCheckBox = '#LEGAL_CONSENT.subscription_type_5594858-27854f4c-b840-41f2-b7af-a3c9f512c9e8'
     }
 }
 

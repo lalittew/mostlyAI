@@ -36,6 +36,10 @@ class GenericFunctions{
     mouseHoverOnElementWithIndex(element, index){
         cy.get(element).eq(index).realHover()
     }
+
+    selectValueFromDropDown(element, value){
+        cy.get(element).select(value)
+    }
 }
 
 export const genericFunctions = new GenericFunctions()
